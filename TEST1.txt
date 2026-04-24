@@ -1,0 +1,135 @@
+ whoami
+anirudhsharma
+anirudhsharma@DESKTOP-EN98HLH:~$ id
+uid=1000(anirudhsharma) gid=1000(anirudhsharma) groups=1000(anirudhsharma),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),107(netdev),1008(docker)
+anirudhsharma@DESKTOP-EN98HLH:~$ who
+anirudhsharma pts/1        2026-04-24 05:06
+anirudhsharma@DESKTOP-EN98HLH:~$ w
+ 05:07:07 up 0 min,  1 user,  load average: 0.68, 0.17, 0.06
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+anirudhs pts/1    -                05:06   16.00s  0.06s  0.04s -bash
+anirudhsharma@DESKTOP-EN98HLH:~$ last
+reboot   system boot  6.6.87.2-microso Fri Apr 24 05:06   still running
+reboot   system boot  6.6.87.2-microso Fri Apr 24 04:54 - 05:04  (00:10)
+reboot   system boot  6.6.87.2-microso Fri Apr 17 08:48 - 16:55  (08:06)
+reboot   system boot  6.6.87.2-microso Wed Apr  1 15:06 - 15:07  (00:01)
+reboot   system boot  6.6.87.2-microso Sat Mar  7 12:17 - 12:22  (00:04)
+reboot   system boot  6.6.87.2-microso Thu Feb 26 11:04 - 11:08  (00:03)
+reboot   system boot  6.6.87.2-microso Mon Feb 23 08:18 - 12:03  (03:45)
+reboot   system boot  6.6.87.2-microso Fri Feb 20 08:53 - 08:58  (00:04)
+reboot   system boot  6.6.87.2-microso Fri Feb 20 08:47 - 08:48  (00:01)
+reboot   system boot  6.6.87.2-microso Fri Feb 20 08:40 - 08:43  (00:02)
+reboot   system boot  6.6.87.2-microso Fri Feb 20 08:40 - 08:40  (00:00)
+reboot   system boot  6.6.87.2-microso Fri Feb 20 08:39 - 08:40  (00:00)
+
+wtmp begins Fri Feb 20 08:39:46 2026
+anirudhsharma@DESKTOP-EN98HLH:~$ uname -a
+Linux DESKTOP-EN98HLH 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+anirudhsharma@DESKTOP-EN98HLH:~$ hostname
+DESKTOP-EN98HLH
+anirudhsharma@DESKTOP-EN98HLH:~$ uptime
+ 05:07:28 up 0 min,  1 user,  load average: 0.49, 0.16, 0.06
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo groupadd developers
+[sudo] password for anirudhsharma:
+anirudhsharma@DESKTOP-EN98HLH:~$ sude groupadd qa
+Command 'sude' not found, did you mean:
+  command 'sudo' from deb sudo (1.9.15p5-3ubuntu5.24.04.2)
+  command 'sudo' from deb sudo-ldap (1.9.15p5-3ubuntu5.24.04.2)
+  command 'sure' from deb python3-sure (2.0.0-3)
+Try: sudo apt install <deb name>
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo groupadd qa
+anirudhsharma@DESKTOP-EN98HLH:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,anirudhsharma
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:anirudhsharma
+fax:x:21:
+voice:x:22:
+cdrom:x:24:anirudhsharma
+floppy:x:25:anirudhsharma
+tape:x:26:
+sudo:x:27:anirudhsharma
+audio:x:29:anirudhsharma
+dip:x:30:anirudhsharma
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:anirudhsharma
+sasl:x:45:
+plugdev:x:46:anirudhsharma
+staff:x:50:
+games:x:60:
+users:x:100:anirudhsharma,developer2,developer3,developer4,developer5
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+systemd-timesync:x:996:
+input:x:995:
+sgx:x:994:
+kvm:x:993:
+render:x:992:
+messagebus:x:101:
+syslog:x:102:
+systemd-resolve:x:991:
+uuidd:x:103:
+_ssh:x:104:
+landscape:x:105:
+polkitd:x:990:
+admin:x:106:
+netdev:x:107:anirudhsharma
+anirudhsharma:x:1000:
+developer1:x:1001:
+developer2:x:1002:
+developer3:x:1003:
+developer4:x:1004:
+developer5:x:1005:
+developer:x:1006:developer1,developer2,developer3
+qanalyst:x:1007:developer4,developer5
+docker:x:1008:anirudhsharma
+developers:x:1009:
+qa:x:1010:
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo useradd -m -g developers aman
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo useradd -m -g developers ritu
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo useradd -m -g qa karan
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo passwd aman
+New password:
+Retype new password:
+passwd: password updated successfully
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo passwd ritu
+New password:
+Retype new password:
+passwd: password updated successfully
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo passwd karan
+New password:
+Retype new password:
+passwd: password updated successfully
+anirudhsharma@DESKTOP-EN98HLH:~$ id aman
+uid=1006(aman) gid=1009(developers) groups=1009(developers)
+anirudhsharma@DESKTOP-EN98HLH:~$ id karan
+uid=1008(karan) gid=1010(qa) groups=1010(qa)
+anirudhsharma@DESKTOP-EN98HLH:~$ who | grep ritu
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo userdel -r ritu
+userdel: ritu mail spool (/var/mail/ritu) not found
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo pkill -u ritu
+pkill: invalid user name: ritu
+anirudhsharma@DESKTOP-EN98HLH:~$ id ritu
+id: ‘ritu’: no such user
+anirudhsharma@DESKTOP-EN98HLH:~$ id aman
+uid=1006(aman) gid=1009(developers) groups=1009(developers)

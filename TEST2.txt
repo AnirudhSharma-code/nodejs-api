@@ -1,0 +1,21 @@
+anirudhsharma@DESKTOP-EN98HLH:~$ cd ~
+anirudhsharma@DESKTOP-EN98HLH:~$ touch index.html
+anirudhsharma@DESKTOP-EN98HLH:~$ nano index.html
+anirudhsharma@DESKTOP-EN98HLH:~$ ls -l index.html
+-rw-r--r-- 1 anirudhsharma anirudhsharma 123 Apr 24 05:14 index.html
+anirudhsharma@DESKTOP-EN98HLH:~$ chmod 777 index.html
+anirudhsharma@DESKTOP-EN98HLH:~$ ls -l index.html
+-rwxrwxrwx 1 anirudhsharma anirudhsharma 123 Apr 24 05:14 index.html
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo groupadd www-data
+groupadd: group 'www-data' already exists
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo chown www-data:www-data index.html
+anirudhsharma@DESKTOP-EN98HLH:~$ ls -l index.html
+-rwxrwxrwx 1 www-data www-data 123 Apr 24 05:14 index.html
+anirudhsharma@DESKTOP-EN98HLH:~$ chmod 755 index.html
+chmod: changing permissions of 'index.html': Operation not permitted
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo 755 index.html
+sudo: 755: command not found
+anirudhsharma@DESKTOP-EN98HLH:~$ sudo chmod 755 index.html
+anirudhsharma@DESKTOP-EN98HLH:~$ ls -l index.html
+-rwxr-xr-x 1 www-data www-data 123 Apr 24 05:14 index.html
+anirudhsharma@DESKTOP-EN98HLH:~$
